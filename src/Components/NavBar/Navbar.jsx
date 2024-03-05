@@ -42,7 +42,7 @@ const Navbar = () => {
         <ul className=' flex gap-5 '>
                 {Menus.map((items, key)=>{
                     return <li key={key}>
-                    <Link to={items.to} className='font-[poppins]  text-md hover:opacity-70 text-white'>
+                    <Link to={items.to} className='font-[poppins]  text-md hover:opacity-70 focus:underline underline-offset-8 decoration-2 decoration-[#3f7b41] text-white'>
                     {items.caption}
                     </Link>
                           </li>         

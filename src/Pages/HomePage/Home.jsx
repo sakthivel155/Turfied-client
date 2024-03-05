@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram ,FaTwitter, FaYoutube , FaVolleyballBall } from "react-icons/fa";
 //UIcomponents------------------------------------------------------
 import CursorBlinkComponent from '../../Components/UI/Cursorblinker';
 import Button from '../../Components/UI/Button'
@@ -8,9 +8,9 @@ import { Link } from 'react-router-dom';
 import {icon} from '../../context/content'
 
 import img1 from '../../assets/Cricket-bro.svg';
-import img from '../../assets/Icons/Logo.png'
-const Home = () => {
 
+const Home = () => {
+const copyrightYear = new Date().getFullYear();
   return (
   
     <div> 
@@ -57,22 +57,29 @@ const Home = () => {
         </div>
         </div>     
 </section>
- <footer className='flex flex-col justify-center h-[230px] mt-20 bg-gray-900 tablet:bg-opacity-90'>
- <div className='mx-28 h-40 '>
-    <div className='flex flex-col justify-between h-full w-48' > 
-	   <div className='flex items-center'>
-	   <img src={img} width={50} />
-        <h1 className="font-[poppins] font-semibold text-4xl hover:text-[#3f7b41] text-white pl-2" >
+ <footer className='flex flex-col justify-center h-[300px] mt-20 bg-gray-900 tablet:bg-opacity-90'>
+ <div className='flex gap-40 mx-28 h-64 pl-28'>
+    <div className='flex flex-col justify-around h-full w-48' > 
+	   <div className='flex items-center justify-center'>
+	  <FaVolleyballBall className='text-white text-4xl '/>
+        <h1 className="font-[poppins] font-semibold text-[2rem]  text-white pl-2" >
 						Turfied</h1>
 	   </div>
-	   <p className=' text-white font-[poppins] text-sm '>Copyright © 2020 <br/>  All rights reserved</p>
-	   <div className='flex h-10 justify-between'>
+	   <p className=' text-white font-[poppins] text-sm  text-center'>Copyright © {copyrightYear}<br/>  All rights reserved</p>
+	   <div className='flex h-10 justify-center gap-4'>
 		  <div className='w-10 rounded-full bg-[#3e4450] flex justify-center items-center '><FaInstagram className='text-2xl text-white' /></div>
-		  <div className='w-10 rounded-full bg-[#3e4450] '></div>
-		  <div className='w-10 rounded-full bg-[#3e4450] '></div>
-		  <div className='w-10 rounded-full bg-[#3e4450] '></div>
+		  <div className='w-10 rounded-full bg-[#3e4450] flex justify-center items-center '><FaTwitter className='text-[20px] text-white' /></div>
+		  <div className='w-10 rounded-full bg-[#3e4450] flex justify-center items-center '><FaYoutube className='text-[20px] text-white' /></div>
 	   </div>
 </div>  
+
+  <form>
+  <label className='text-white text-[20px] font-semibold'>Contact Us</label>
+  <input type="text" name="email" className="py-3.5 w-full rounded pl-3 bg-gray-800 text-sm outline-none text-white mt-5" placeholder="Email"/>
+  <textarea name="Message" className="py-3.5 w-full rounded pl-3 bg-gray-800 text-sm outline-none text-white mt-5" placeholder="Message">
+  </textarea>
+  <button className='text-white bg-[#3f7b41] px-4 py-1 rounded mt-3'>Send</button>
+  </form>
 
         </div>
  </footer>

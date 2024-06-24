@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@radix-ui/react-avatar": "^1.0.4",
     "aos": "^3.0.0-beta.6",
     "axios": "^1.6.7",
     "react": "^18.2.0",
